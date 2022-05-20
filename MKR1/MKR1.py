@@ -17,8 +17,13 @@ with open("katalog.csv", "w", encoding="UTF=8") as file:
             tr = table_1.find("tr") 
             table_2 = tr.find("table") 
             a = table_2.find("a") 
-            file.write(f"{a}") 
-            print(a)
+            name_a = a.find(text=True, recursive=False)
+            tr = table_1.find("tr")
+            td = tr.find("td")
+            div = td.find("div")
+            span = div.find("span")
+            name_span = span.find(text=True, recursive=False)
+            file.write(f"{name_a} -- {name_span}")
 
 
      

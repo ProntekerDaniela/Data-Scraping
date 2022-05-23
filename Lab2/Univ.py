@@ -1,7 +1,7 @@
 from cgitb import strong
 from requests import get
 from bs4 import BeautifulSoup
-from sqlite3 import connect
+from sqlite3 import connect 
 
 BASE_URL = "https://kubg.edu.ua/"  #Головна сторінка університету
 URL = f"{BASE_URL}/структура/instytuty-ta-fakultety"   #Інститути та кафедри
